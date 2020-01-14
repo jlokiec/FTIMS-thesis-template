@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt,polish,twoside]{extreport}
+
+% ustawienia marginesów
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ top=25mm,
+ inner=35mm,
+ outer=25mm,
+ bottom=25mm,
+}
+
+% ustawienie interlinii na 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+% zmiana punktowania list na myślniki
+\renewcommand\labelitemi{---}
+
+% polskie znaki
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{polski}
+
+% bibliografia
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+\usepackage{hyperref}
+
+% listingi i spis listingów
+\usepackage{listings}
+\usepackage[center]{caption}
+\DeclareCaptionType{code}[Listing][Spis listingów]
+\lstset{breaklines=true,basicstyle=\ttfamily\scriptsize}
+
+% rysunki i spis rysunków
+\usepackage{float}
+\usepackage{graphicx}
+\graphicspath{ {./img/} }
+\usepackage[nottoc]{tocbibind}
+
+% tabele
+\floatstyle{plaintop}
+\restylefloat{table}
+\captionsetup[table]{name=Tabela}
+
+% treść
+\begin{document}
+\tableofcontents
+
+\chapter{Pierwszy rozdział}
+
+\section{Podrozdział}
+
+Przykładowy obrazek przedstawia rysunek \ref{example_image}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,keepaspectratio]{img/example_photo.jpeg}
+    \caption[Podpis w spisie rysunków]{Podpis pod rysunkiem}
+    \label{example_image}
+\end{figure}
+
+Przykładowy listing przedstawia listing \ref{example_listing}.
+
+\begin{code}[H]
+\begin{lstlisting}
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+\end{lstlisting}
+\caption[Podpis w spisie listingów]{Podpis pod listingiem}
+\label{example_listing}
+\end{code}
+
+Przykładową tabelę przedstawia tabela \ref{example_table}.
+ 
+\begin{table}[H]
+\centering
+\begin{tabular}{||c c c c||} 
+ \hline
+ Kol1 & Kol2 & Kol3 & Kol4 \\ [0.5ex] 
+ \hline\hline
+ 1 & 6 & 87837 & 787 \\ 
+ 2 & 7 & 78 & 5415 \\
+ 3 & 545 & 778 & 7507 \\
+ 4 & 545 & 18744 & 7560 \\
+ 5 & 88 & 788 & 6344 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption[Podpis w spisie tabel]{Podpis nad tabelą}
+\label{example_table}
+\end{table}
+
+Odniesienie do książki \cite{example_book}. Odniesienie do strony internetowej \cite{example_website}.
+
+\section{Lorem ipsum}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, metus fringilla fermentum blandit, nisl turpis vestibulum justo, ultrices finibus magna augue et libero. Praesent interdum vestibulum ultrices. In sem nibh, tristique et ullamcorper vitae, posuere a sapien. Etiam ullamcorper mollis sapien, eu volutpat leo rhoncus eget. Donec volutpat fringilla erat in fermentum. Donec fermentum facilisis libero, eu lacinia nisi vestibulum sit amet. Nam enim nisi, imperdiet in enim ac, commodo pulvinar arcu. Nulla ligula dolor, sodales vitae lectus sit amet, eleifend ornare velit.
+
+Etiam imperdiet est non nisl imperdiet dapibus. Cras eget risus euismod, vehicula nulla vitae, rutrum purus. Suspendisse potenti. Donec lorem urna, dictum ultricies maximus quis, molestie eu erat. Suspendisse non leo mollis, faucibus est sit amet, euismod dui. Ut id bibendum sem, eget molestie sem. Nunc semper pretium felis in volutpat.
+
+Curabitur at justo tempus, lobortis purus sit amet, pharetra tortor. Morbi mattis elementum magna et condimentum. Donec a nisi auctor nisl imperdiet consequat. Nunc scelerisque, ante id egestas imperdiet, nisl ex semper diam, in lobortis erat neque eget mi. Sed ut porttitor tellus. Suspendisse et augue condimentum, semper purus id, placerat diam. Sed posuere nisi in felis dignissim, id vulputate lectus mollis. Nullam nec ex pulvinar, consectetur odio id, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec vestibulum, libero pharetra euismod rhoncus, lorem libero luctus elit, a efficitur velit mi id massa.
+
+Vivamus interdum interdum odio, et ornare ipsum. Sed sed finibus ex. Nulla suscipit, mi eu ornare imperdiet, ligula nisi sodales erat, et accumsan nunc ante vitae nibh. Ut fringilla ornare erat, sit amet cursus quam maximus varius. Curabitur nec nisi et tortor pellentesque elementum id consectetur elit. Suspendisse in tempus ex. Mauris in massa enim. Sed accumsan nisi blandit quam hendrerit, id pellentesque tortor mattis. Nunc maximus ornare augue, vitae porta est consequat vel.
+
+Praesent ante risus, viverra eget ipsum eu, scelerisque facilisis ipsum. Curabitur venenatis, odio sit amet dignissim lobortis, ante magna consequat mi, non sollicitudin nulla lacus vitae velit. Pellentesque ornare finibus volutpat. Nulla a elit dignissim, vestibulum sem nec, hendrerit purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum eget venenatis justo. Sed eu sapien pellentesque, feugiat quam vitae, elementum quam. Praesent tincidunt dolor egestas, maximus felis eu, maximus eros. Nam tempus, velit ac sollicitudin dignissim, dolor sapien tincidunt tortor, quis vestibulum metus orci ac lectus. Aliquam gravida, urna vitae bibendum tincidunt, est lorem sollicitudin risus, vel scelerisque massa arcu eget erat. Aliquam congue ac urna et scelerisque. Etiam in rutrum eros. Duis consequat gravida feugiat. Morbi laoreet vulputate dui id bibendum.
+
+\chapter{Drugi rozdział}
+
+\chapter{Kolejny rozdział}
+
+\newpage
+\printbibliography[heading=bibintoc,title={Bibliografia}]
+
+\newpage
+\listoffigures
+
+\newpage
+\listofcodes
+
+\newpage
+\renewcommand{\listtablename}{Spis tabel}
+\listoftables
+
+\end{document}
