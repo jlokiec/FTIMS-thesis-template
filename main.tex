@@ -45,8 +45,17 @@
 \restylefloat{table}
 \captionsetup[table]{name=Tabela}
 
+% strona tytułowa
+\usepackage{pdfpages}
+
 % treść
 \begin{document}
+\pagenumbering{gobble}
+\includepdf[pages={1}]{pdf/title_page}
+
+\null\newpage
+
+\pagenumbering{arabic}
 \tableofcontents
 
 \chapter{Pierwszy rozdział}
