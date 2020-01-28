@@ -7,6 +7,9 @@ Zapewnia:
 
 Przykładowy wygenerowany plik PDF: [example.pdf](example.pdf).  
 
+## Strona tytułowa  
+Stronę tytułową najłatwiej wstawić jako plik PDF. W tym celu należy podmienić plik `pdf/title_page.pdf` na inny, wygenerowany przez siebie.
+
 ## Wstawianie rysunków  
 Pliki rysunków należy umieścić w folderze `img`. Przykład wstawienia rysunku w pracy znajduje się w pliku [main.tex](main.tex).  
 
@@ -32,6 +35,11 @@ $ biber main
 $ pdflatex main.tex
 ```  
 Po wykonaniu powyższych poleceń kompilator wygeneruje wynikowy plik main.pdf.  
+Czasami dwukrotne uruchomienie kompilatora nie wystarcza i generuje on ostrzeżenia, np. takie:
+```
+LaTeX Warning: There were undefined references.
+```  
+W takim przypadku kompiluj pracę do momentu aż ostrzeżenia znikną.  
 
 #### Wykorzystane zasoby  
 Użyte zdjęcie: https://www.pexels.com/photo/blur-close-up-code-computer-546819/
